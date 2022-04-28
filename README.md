@@ -1,0 +1,1 @@
+# auto-dependency-registration-demo
