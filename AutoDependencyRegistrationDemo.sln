@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoDependencyRegistrationDemo", "AutoDependencyRegistrationDemo\AutoDependencyRegistrationDemo.csproj", "{638BDEC2-B698-4447-AA7F-17BDC5E18AEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoDependencyRegistrationDemo.Business", "AutoDependencyRegistrationDemo.Business\AutoDependencyRegistrationDemo.Business.csproj", "{2CC965F1-97B3-4384-A3EC-92452F35EE68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{638BDEC2-B698-4447-AA7F-17BDC5E18AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{638BDEC2-B698-4447-AA7F-17BDC5E18AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{638BDEC2-B698-4447-AA7F-17BDC5E18AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{638BDEC2-B698-4447-AA7F-17BDC5E18AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CC965F1-97B3-4384-A3EC-92452F35EE68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CC965F1-97B3-4384-A3EC-92452F35EE68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CC965F1-97B3-4384-A3EC-92452F35EE68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CC965F1-97B3-4384-A3EC-92452F35EE68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
