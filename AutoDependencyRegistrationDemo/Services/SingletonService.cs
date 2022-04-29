@@ -11,6 +11,6 @@ public class SingletonService : ISingletonService
     
     public string DemoService()
     {
-        return " Singleton: " + _guid.ToString();
+        return "\nSingleton: " + _guid.ToString();
     }
 }

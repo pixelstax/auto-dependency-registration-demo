@@ -6,34 +6,36 @@ namespace AutoDependencyRegistrationDemo.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class ServiceExampleController : ControllerBase
 {
     private readonly IDifferentProject _differentProject;
     private readonly ITransientService _transientService;
     private readonly ISingletonService _singletonService;
     private readonly IScopedService _scopedService;
+    
+    private readonly IScopedReference _scopedReference;
+    private readonly ITransientReference _transientReference;
 
-    public WeatherForecastController(
+    public ServiceExampleController(
         IDifferentProject differentProject,
         ITransientService transientService,
         ISingletonService singletonService,
-        IScopedService scopedService)
+        IScopedService scopedService,
+        IScopedReference scopedReference, ITransientReference transientReference)
     {
         _differentProject = differentProject;
         _transientService = transientService;
         _singletonService = singletonService;
         _scopedService = scopedService;
+        _scopedReference = scopedReference;
+        _transientReference = transientReference;
     }
 
-    [HttpGet(Name = "Hello")]
+    [HttpGet]
+    [Route("demo")]
     public string Get()
     {
-        var json = _differentProject.DemoService() + _transientService.DemoService() + _singletonService.DemoService() +
-               _scopedService.DemoService();
-        
-        var json2 = _differentProject.DemoService() + _transientService.DemoService() + _singletonService.DemoService() +
-                    _scopedService.DemoService();
-
-        return json + "\n" + json2;
+        return _differentProject.DemoService() + _transientService.DemoService() + _singletonService.DemoService() +
+               _scopedService.DemoService() + "\n\n" + _scopedReference.Demo() + _transientReference.Demo();
     }
 }
