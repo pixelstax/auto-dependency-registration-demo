@@ -11,6 +11,6 @@ public class DifferentProjectService : IDifferentProject
     
     public string DemoService()
     {
-        return "Different project: " + _guid.ToString();
+        return "Different project: " + _guid;
     }
 }

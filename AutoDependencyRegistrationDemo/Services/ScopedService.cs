@@ -11,6 +11,6 @@ public class ScopedService : IScopedService
     
     public string DemoService()
     {
-        return "\nScoped: " + _guid.ToString();
+        return "\nScoped: " + _guid;
     }
 }

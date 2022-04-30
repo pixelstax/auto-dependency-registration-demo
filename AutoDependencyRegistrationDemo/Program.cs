@@ -11,6 +11,7 @@ builder.Services.AddSingleton<ISingletonService, SingletonService>();
 builder.Services.AddTransient<IDifferentProject, DifferentProjectService>();
 builder.Services.AddScoped<IScopedReference, ScopedReferenceService>();
 builder.Services.AddTransient<ITransientReference, TransientReference>();
+builder.Services.AddSingleton<ISingletonReference, SingletonReference>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

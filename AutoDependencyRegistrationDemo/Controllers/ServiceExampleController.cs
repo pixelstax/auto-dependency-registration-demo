@@ -15,13 +15,16 @@ public class ServiceExampleController : ControllerBase
     
     private readonly IScopedReference _scopedReference;
     private readonly ITransientReference _transientReference;
+    private readonly ISingletonReference _singletonReference;
 
     public ServiceExampleController(
         IDifferentProject differentProject,
         ITransientService transientService,
         ISingletonService singletonService,
         IScopedService scopedService,
-        IScopedReference scopedReference, ITransientReference transientReference)
+        IScopedReference scopedReference,
+        ITransientReference transientReference,
+        ISingletonReference singletonReference)
     {
         _differentProject = differentProject;
         _transientService = transientService;
@@ -29,13 +32,16 @@ public class ServiceExampleController : ControllerBase
         _scopedService = scopedService;
         _scopedReference = scopedReference;
         _transientReference = transientReference;
+        _singletonReference = singletonReference;
     }
 
     [HttpGet]
     [Route("demo")]
     public string Get()
     {
-        return _differentProject.DemoService() + _transientService.DemoService() + _singletonService.DemoService() +
-               _scopedService.DemoService() + "\n\n" + _scopedReference.Demo() + _transientReference.Demo();
+        return "First call:\n\n" + _differentProject.DemoService() + _singletonService.DemoService() +
+               _scopedService.DemoService() + _transientService.DemoService() +
+               "\n\nSeparate class calling above classes" +
+               "\n" + _singletonReference.Demo() + _scopedReference.Demo() + _transientReference.Demo();
     }
 }

@@ -11,6 +11,6 @@ public class TransientService : ITransientService
     
     public string DemoService()
     {
-        return "\nTransient: " + _guid.ToString();
+        return "\nTransient: " + _guid;
     }
 }
