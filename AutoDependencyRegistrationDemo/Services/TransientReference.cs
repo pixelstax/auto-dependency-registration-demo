@@ -1,5 +1,8 @@
-﻿namespace AutoDependencyRegistrationDemo.Services;
+﻿using AutoDependencyRegistration.Attributes;
 
+namespace AutoDependencyRegistrationDemo.Services;
+
+[RegisterClassAsTransient]
 public class TransientReference : ITransientReference
 {
     private readonly ITransientService _transientService;

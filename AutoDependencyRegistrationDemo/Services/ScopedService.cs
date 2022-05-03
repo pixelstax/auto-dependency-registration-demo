@@ -1,5 +1,8 @@
-﻿namespace AutoDependencyRegistrationDemo.Services;
+﻿using AutoDependencyRegistration.Attributes;
 
+namespace AutoDependencyRegistrationDemo.Services;
+
+[RegisterClassAsScoped]
 public class ScopedService : IScopedService
 {
     private readonly Guid _guid;

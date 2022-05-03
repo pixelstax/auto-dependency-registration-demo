@@ -1,5 +1,8 @@
-﻿namespace AutoDependencyRegistrationDemo.Business.Services;
+﻿using AutoDependencyRegistration.Attributes;
 
+namespace AutoDependencyRegistrationDemo.Business.Services;
+
+[RegisterClassAsTransient]
 public class DifferentProjectService : IDifferentProject
 {
     private readonly Guid _guid;

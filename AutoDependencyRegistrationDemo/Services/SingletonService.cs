@@ -1,5 +1,8 @@
-﻿namespace AutoDependencyRegistrationDemo.Services;
+﻿using AutoDependencyRegistration.Attributes;
 
+namespace AutoDependencyRegistrationDemo.Services;
+
+[RegisterClassAsSingleton]
 public class SingletonService : ISingletonService
 {
     private readonly Guid _guid;

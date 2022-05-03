@@ -1,5 +1,8 @@
-﻿namespace AutoDependencyRegistrationDemo.Services;
+﻿using AutoDependencyRegistration.Attributes;
 
+namespace AutoDependencyRegistrationDemo.Services;
+
+[RegisterClassAsScoped]
 public class ScopedReferenceService : IScopedReference
 {
     private readonly IScopedService _scopedService;

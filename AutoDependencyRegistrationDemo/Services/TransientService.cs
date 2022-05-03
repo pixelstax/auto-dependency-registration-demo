@@ -1,14 +1,16 @@
-﻿namespace AutoDependencyRegistrationDemo.Services;
+﻿using AutoDependencyRegistration.Attributes;
 
+namespace AutoDependencyRegistrationDemo.Services;
+
+[RegisterClassAsTransient]
 public class TransientService : ITransientService
 {
-    private readonly Guid _guid;
-
     public TransientService()
     {
         _guid = Guid.NewGuid();
     }
     
+    private readonly Guid _guid;
     public string DemoService()
     {
         return "\nTransient: " + _guid;

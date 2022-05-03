@@ -1,5 +1,8 @@
-﻿namespace AutoDependencyRegistrationDemo.Services;
+﻿using AutoDependencyRegistration.Attributes;
 
+namespace AutoDependencyRegistrationDemo.Services;
+
+[RegisterClassAsSingleton]
 public class SingletonReference : ISingletonReference
 {
     private readonly ISingletonService _singletonService;
